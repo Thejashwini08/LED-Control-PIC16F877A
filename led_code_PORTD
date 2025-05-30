@@ -1,0 +1,21 @@
+#define _XTAL_FREQ 6000000  // or appropriate value for your crystal frequency
+#include <xc.h>
+
+void main(void) {
+    TRISD = 0x00;      // Set PORTD as output
+    PORTD = 0x00;      // Initially turn OFF all PORTD pins
+
+    while(1) {
+        PORTD = 0x02;  // RD1 ON, RD7 OFF
+        __delay_ms(3000);  // Delay for 3 seconds
+
+        PORTD = 0x80;  // RD1 OFF, RD7 ON
+        __delay_ms(3000);  // Delay for 3 seconds
+
+        PORTD = 0x82;  // RD1 ON, RD7 ON
+        __delay_ms(3000);  // Delay for 3 seconds
+
+        PORTD = 0x00;  // RD1 OFF, RD7 OFF
+        __delay_ms(3000);  // Delay for 3 seconds
+    }
+}
