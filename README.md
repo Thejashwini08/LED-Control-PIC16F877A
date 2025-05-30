@@ -2,7 +2,13 @@
 Embedded C project for controlling LEDs on PIC16F877A, demonstrating fundamental embedded programming concepts with PICSimLAb  simulation.
 
 ---
+## 🛠️ Tools Used
 
+- **MPLAB X IDE**
+- **XC8 Compiler**
+- **PICSimLab**
+- **PIC Microcontroller** (PIC16F877A)
+---
 ## Project Description
 
 ### 1️. led.c  
